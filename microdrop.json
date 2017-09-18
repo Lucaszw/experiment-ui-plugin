@@ -1,0 +1,6 @@
+{
+  "name": "experiment-ui-plugin",
+  "version": "0.0.1",
+  "type": "ui",
+  "script": "experiment-ui.js"
+}

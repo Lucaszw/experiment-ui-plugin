@@ -212,5 +212,4 @@ class ExperimentUI extends UIPlugin {
   }
 }
 
-if (!window.microdropPlugins) window.microdropPlugins = new Map();
 window.microdropPlugins.set("ExperimentUI", ExperimentUI);

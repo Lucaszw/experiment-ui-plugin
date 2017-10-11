@@ -2,7 +2,6 @@ class ExperimentUI extends UIPlugin {
   constructor(elem, focusTracker){
     super(elem, focusTracker, "Experiment Controller");
     this.controls = this.Controls();
-    this.listen();
   }
 
   // ** Event Listeners **
@@ -17,7 +16,7 @@ class ExperimentUI extends UIPlugin {
     this.bindTriggerMsg("protocol-model", "change-protocol", "change-protocol");
     this.bindTriggerMsg("protocol-model", "delete-protocol", "delete-protocol");
     this.bindTriggerMsg("protocol-model", "upload-protocol", "upload-protocol");
-    this.bindNotifyMsg("protocol-model", "request-protocol-export", "request-protocol-export");
+    this.bindTriggerMsg("protocol-model", "request-protocol-export", "request-protocol-export");
 
     this.on("item-clicked", this.onItemClicked.bind(this));
     this.on("delete", this.onDelete.bind(this));
@@ -26,7 +25,7 @@ class ExperimentUI extends UIPlugin {
     const anchor = D('<a style="display:none"></a>');
     const data = "data:text/json;charset=utf-8," + encodeURIComponent(str);
     anchor.setAttribute("href", data);
-    anchor.setAttribute("download", "protocol.json");
+    anchor.setAttribute("download", `protocol_${Date.now()}.protocol.json`);
     anchor.click();
   }
   readFile(input) {

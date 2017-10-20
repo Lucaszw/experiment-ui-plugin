@@ -1,0 +1,27 @@
+{
+  "name": "@microdrop/experiment-ui",
+  "version": "1.0.0",
+  "description": "Create, delete, and manage protocols",
+  "main": "experiment-ui.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lucaszw/experiment-ui-plugin.git"
+  },
+  "keywords": [
+    "Microdrop",
+    "Protocols",
+    "Experiment"
+  ],
+  "author": "Sci-Bots",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/Lucaszw/experiment-ui-plugin/issues"
+  },
+  "homepage": "https://github.com/Lucaszw/experiment-ui-plugin#readme",
+  "dependencies": {
+    "yo-yo": "^1.4.1"
+  }
+}
